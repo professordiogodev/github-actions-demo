@@ -16,3 +16,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      # Add This Below!
+      - name: Accessing a Website
+        run: echo "I'm accessing ${{ vars.DIOGO_URL }}"
+
+      - name: Accessing an API that requires a secret.
+        run: echo "I'll now be using the super secret ${{ secrets.DIOGO_TOKEN }} to connect."
